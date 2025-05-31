@@ -1,9 +1,7 @@
-- name: Deploy Maven Artifact
-  hosts: localhost
+- name: Basic Server Setup
+  hosts: local
   become: no
   tasks:
-    - name: Creae a deployment direcory if not created
-      file:
-        path: /opt/directory
-        status: deployments
-        Mode: '7055'
+    - name: example task
+      debug:
+        msg: "hello,this is a basic setup"
